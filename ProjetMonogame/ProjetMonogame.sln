@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet1", "Projet1\Projet1.csproj", "{937C454F-796B-4A78-BE17-31B2EA1401CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTab", "GameTab\GameTab.csproj", "{0C93FF77-7A36-4A02-B6E9-11504819B81C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final", "Final\Final.csproj", "{26238163-1F4D-42B2-9C1C-845583910E98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +19,14 @@ Global
 		{937C454F-796B-4A78-BE17-31B2EA1401CF}.Debug|x86.Build.0 = Debug|x86
 		{937C454F-796B-4A78-BE17-31B2EA1401CF}.Release|x86.ActiveCfg = Release|x86
 		{937C454F-796B-4A78-BE17-31B2EA1401CF}.Release|x86.Build.0 = Release|x86
+		{0C93FF77-7A36-4A02-B6E9-11504819B81C}.Debug|x86.ActiveCfg = Debug|x86
+		{0C93FF77-7A36-4A02-B6E9-11504819B81C}.Debug|x86.Build.0 = Debug|x86
+		{0C93FF77-7A36-4A02-B6E9-11504819B81C}.Release|x86.ActiveCfg = Release|x86
+		{0C93FF77-7A36-4A02-B6E9-11504819B81C}.Release|x86.Build.0 = Release|x86
+		{26238163-1F4D-42B2-9C1C-845583910E98}.Debug|x86.ActiveCfg = Debug|x86
+		{26238163-1F4D-42B2-9C1C-845583910E98}.Debug|x86.Build.0 = Debug|x86
+		{26238163-1F4D-42B2-9C1C-845583910E98}.Release|x86.ActiveCfg = Release|x86
+		{26238163-1F4D-42B2-9C1C-845583910E98}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

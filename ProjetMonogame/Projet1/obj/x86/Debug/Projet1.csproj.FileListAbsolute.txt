@@ -24,3 +24,9 @@ C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\P
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\obj\x86\Debug\Projet1.exe
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\obj\x86\Debug\Projet1.pdb
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\bin\Windows\x86\Debug\Content\st6.png
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\bin\Windows\x86\Debug\Content\chicken.png
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\bin\Windows\x86\Debug\Content\egg.png
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\bin\Windows\x86\Debug\Content\eggplosion.png
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\bin\Windows\x86\Debug\Content\flare.png
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\bin\Windows\x86\Debug\Content\missile.png
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Projet1\bin\Windows\x86\Debug\Content\space.jpg
