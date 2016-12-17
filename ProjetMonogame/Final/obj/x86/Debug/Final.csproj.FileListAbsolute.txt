@@ -36,10 +36,12 @@ C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\F
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\shadowball.png
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\thunderbolt.png
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\enter.png
-C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\song.mp3
-C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\song.wma
-C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\song.xnb
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\megamantitle.mp3
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\megamantitle.wma
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\megamantitle.xnb
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\start.jpg
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\song1.mp3
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\song1.wma
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\song1.xnb
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\GO.png
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\Flash-laser-03.xnb

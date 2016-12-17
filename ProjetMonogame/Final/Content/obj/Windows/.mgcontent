@@ -4,7 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Andy/Documents/GitHub/monogame-travail-1-whitewolf1898/ProjetMonogame/Final/Content/son/song.mp3</File>
     <File>C:/Users/Andy/Documents/GitHub/monogame-travail-1-whitewolf1898/ProjetMonogame/Final/Content/son/megamantitle.mp3</File>
+    <File>C:/Users/Andy/Documents/GitHub/monogame-travail-1-whitewolf1898/ProjetMonogame/Final/Content/son/song1.mp3</File>
+    <File>C:/Users/Andy/Documents/GitHub/monogame-travail-1-whitewolf1898/ProjetMonogame/Final/Content/son/Flash-laser-03.wav</File>
   </SourceFiles>
 </SourceFileCollection>

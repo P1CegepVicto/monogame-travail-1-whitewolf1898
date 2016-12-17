@@ -17,7 +17,7 @@ namespace Final
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SoundEffect son;
-        SoundEffectInstance boom;
+        SoundEffectInstance laser;
 
         int mpg = 0;
         protected Song song;
@@ -35,6 +35,7 @@ namespace Final
         GameObject[] thunderbolt;
         GameObject boost;
         GameObject start;
+        GameObject GO;
 
 
         int b = 3;
@@ -89,31 +90,34 @@ namespace Final
             fenetre = graphics.GraphicsDevice.Viewport.Bounds;
             fenetre.Width = graphics.GraphicsDevice.DisplayMode.Width;
             fenetre.Height = graphics.GraphicsDevice.DisplayMode.Height;
-            if(mpg == 0)
-            {
+            
                 start = new GameObject();
                 start.sprite = Content.Load<Texture2D>("start.jpg");
                 fonts= Content.Load<SpriteFont>("Font");
-
-            }
-            if (mpg == 1)
-            {
+            GO = new GameObject();
+            GO.sprite = Content.Load<Texture2D>("GO.png");
+                
+            
                 font = Content.Load<SpriteFont>("Font");
                 ship = new GameObject();
-                chick = new GameObject[maxChick];
+                chick = new GameObject[maxChick + 1];
                 space = new GameObject();
                 boost = new GameObject();
                 space.position.X = 0;
                 space.position.Y = 0;
                 space2 = new GameObject();
                 bullet = new GameObject[maxBullet];
-                egg = new GameObject[maxChick];
+                egg = new GameObject[maxChick + 1];
                 eggplosion = new GameObject();
                 flare = new GameObject();
-                
 
-                Song song = Content.Load<Song>("Son//song");
+            son = Content.Load<SoundEffect>("Son\\Flash-laser-03");
+            laser = son.CreateInstance();
+
+            Song song = Content.Load<Song>("Son//song1");
                 MediaPlayer.Play(song);
+                MediaPlayer.Volume = 1;
+                MediaPlayer.IsRepeating = true;
 
                 ship.isAlive = true;
                 ship.vie = 100;
@@ -153,7 +157,7 @@ namespace Final
                 space.sprite = Content.Load<Texture2D>("space.jpg");
                 space2.sprite = Content.Load<Texture2D>("space.jpg");
                 // TODO: use this.Content to load your game content here
-            }
+            
         }
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
@@ -173,15 +177,14 @@ namespace Final
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            if (mpg == 0)
-            {
+            
                 
                 if (Keyboard.GetState().IsKeyDown(Keys.Enter))
                 {
-                    mpg++;
+                    mpg = 1;
                 }
-            }
-            if (mpg == 1)
+            
+            else if (mpg == 1)
             {
                 
                 UpdateChick(gameTime);
@@ -192,18 +195,64 @@ namespace Final
                 UpdateBullet(gameTime);
             }
 
+
           
             // TODO: Add your update logic here
              base.Update(gameTime);
             // TODO: Add your update logic here
+            if(mpg ==2)
+            {
+
+                
+                ship.isAlive = true;
+                ship.vie = 100;
+                ship.position.X = 750;
+                ship.position.Y = 750;
+                ship.sprite = Content.Load<Texture2D>("st6.png");
+
+                for (int i = 0; i < chick.Length; i++)
+                {
+                    chick[i] = new GameObject();
+                    chick[i].isAlive = true;
+                    chick[i].direction.X = de.Next(-10, -4);
+                    chick[i].vitesse.X = -10;
+                    chick[i].sprite = Content.Load<Texture2D>("chicken.png");
+                    chick[i].position.X = fenetre.Width;
+                    chick[i].position.Y = de.Next(0, 250);
+
+                    egg[i] = new GameObject();
+                    egg[i].isAlive = false;
+                    egg[i].position = chick[i].position;
+                    egg[i].vitesse.Y = de.Next(8, 15);
+                    egg[i].sprite = Content.Load<Texture2D>("egg.png");
+                }
+
+                for (int i = 0; i < bullet.Length; i++)
+                {
+
+                    bullet[i] = new GameObject();
+                    bullet[i].isAlive = false;
+                    bullet[i].position.X = ship.position.X + (ship.position.X / 2);
+                    bullet[i].position.Y = ship.position.Y;
+                    bullet[i].vitesse.Y = -25;
+                    bullet[i].sprite = Content.Load<Texture2D>("missile.png");
+
+                }
+                nbEnnemy = 0;
+                eggplosion.isAlive = true;
+                if (Keyboard.GetState().IsKeyDown(Keys.R))
+                {
+                    mpg = 0;
+                }
+            }
         }
 
         public void UpdateShip()
         {
          
-            if (eggplosion.isAlive == false)
+            if (eggplosion.isAlive == false && ship.isAlive == false)
             {
-                Exit();
+                mpg = 2;
             }
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
@@ -265,12 +314,17 @@ namespace Final
         public void UpdateChick(GameTime gameTime)
         {
             //faire apparaitre un ennemi a la fois   
-            gameTime.TotalGameTime.Equals(0);
             if (nbEnnemy * 2 < gameTime.TotalGameTime.Seconds && nbEnnemy < maxChick)
             {
-                chick[nbEnnemy].isAlive = true;
                 nbEnnemy++;
-            }
+                if (nbEnnemy > maxChick)
+                {
+                    nbEnnemy = 0;
+                }
+                chick[nbEnnemy].isAlive = true;
+                
+           }
+            
             for (int i = 0; i < nbEnnemy; i++)
             {
                 chick[i].position.X += (int)chick[i].direction.X;
@@ -322,6 +376,7 @@ namespace Final
                         bullet[i].vitesse.Y = -25;
                         bullet[i].position.X = ship.position.X;
                         bullet[i].position.Y = ship.position.Y;
+                        laser.Play();
                         if (bullet[i].position.Y < fenetre.Top)
                         {
                             bullet[i].isAlive = false;
@@ -383,7 +438,7 @@ namespace Final
                 spriteBatch.Draw(start.sprite, fenetre, Color.White);
                 spriteBatch.DrawString(fonts, "Appuyer sur entrer pour commencer", new Vector2(fenetre.Width / 3, fenetre.Height / 2),Color.DarkRed);
             }
-            if (mpg == 1)
+            else if (mpg == 1)
             {
                 spriteBatch.Draw(space.sprite, space.position, Color.White);
                 spriteBatch.Draw(space2.sprite, space2.position, Color.White);
@@ -424,9 +479,19 @@ namespace Final
                         }
                     }
                 }
+              
+
                 spriteBatch.DrawString(font ,ship.vie.ToString() + " LP" , new Vector2( 100,100), Color.Crimson);
             }
-                
+            else if(mpg == 2)
+            {
+                spriteBatch.Draw(space.sprite, space.position, Color.White);
+                spriteBatch.Draw(space2.sprite, space2.position, Color.White);
+                spriteBatch.Draw(eggplosion.sprite, ship.position);
+                spriteBatch.Draw(GO.sprite, new Vector2(fenetre.Width /3, fenetre.Height / 2), Color.White);
+                spriteBatch.DrawString(fonts, "Appuyer sur R pour revenir au menu", new Vector2(fenetre.Width / 3, fenetre.Height / 2 + 100),Color.Azure);
+            }
+
             // TODO: Add your drawing code here
             spriteBatch.End();
             base.Draw(gameTime);

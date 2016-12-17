@@ -153,8 +153,9 @@ namespace GameTab
          //faire apparaitre un ennemi a la fois   
             if (nbEnnemy * 2 < gameTime.TotalGameTime.Seconds && nbEnnemy < maxChick)
                 {
-                    chick[nbEnnemy].isAlive = true;
                     nbEnnemy++;
+                    chick[nbEnnemy].isAlive = true;
+                    
                 }
             for (int i = 0; i < nbEnnemy; i++)
             {

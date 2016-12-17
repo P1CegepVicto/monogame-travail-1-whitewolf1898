@@ -13,15 +13,21 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin son\song.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:son\song.mp3
-
 #begin son/megamantitle.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:son/megamantitle.mp3
+
+#begin son/song1.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:son/song1.mp3
+
+#begin son/Flash-laser-03.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:son/Flash-laser-03.wav
 
