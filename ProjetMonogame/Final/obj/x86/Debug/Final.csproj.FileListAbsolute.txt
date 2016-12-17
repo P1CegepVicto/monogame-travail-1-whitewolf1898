@@ -42,3 +42,4 @@ C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\F
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\megamantitle.mp3
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\megamantitle.wma
 C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\son\megamantitle.xnb
+C:\Users\Andy\Documents\GitHub\monogame-travail-1-whitewolf1898\ProjetMonogame\Final\bin\Windows\x86\Debug\Content\start.jpg
